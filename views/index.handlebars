@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">Burger</h1>
+            <p class="lead">Add a burger and eat a burger.</p>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="col-md-6" id='toEat'>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="card mb-3" style='width: 100%'>
+                <div class="card-body text-center">
+                    {{burger_name}}
+                </div>
+            </div>
+            <button class="btn btn-dark eatBtn" data-id='{{id}}'>Devour</button>
+            {{/unless}}
+            {{/each}}
+        </div>
+        <div class="col-md-6" id='devoured'>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    {{burger_name}}
+                </div>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    <form class='center-text' id='submitForm'>
+        <div class="row d-flex justify-content-center">
+            <div class="form-group" style='width: 25rem'>
+                <input type="text" class="form-control" id="burger" name='burger' placeholder="Burger name">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button class='btn btn-dark' type="submit">Add Burger</button>
+        </div>
+    </form>
+    <script src="/assets/js/app.js"></script>
+</div>
