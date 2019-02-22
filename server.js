@@ -2,6 +2,20 @@ const exphbs = require("express-handlebars");
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 8080;
+const mysql = require('mysql');
+var connection;
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.end.JAWSDB_URL);
+}
+else {
+    connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'burgers_db'
+    });
+};
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
