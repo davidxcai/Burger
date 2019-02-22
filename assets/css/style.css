@@ -1,3 +1,15 @@
 body {
-    background-color: #faab3e;
+    background-color: black;
+    background-image: url('/assets/images/guy-fieri-las-vegas-baby.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron {
+    /* background-image: url('/assets/images/burgerjumbo.png'); */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
 }
