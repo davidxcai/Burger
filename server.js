@@ -17,6 +17,9 @@ else {
     });
 };
 
+connection.connect();
+module.exports = connection;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
